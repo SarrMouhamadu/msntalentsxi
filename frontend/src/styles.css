@@ -4,21 +4,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --primary: #00853f;       /* Vert emblématique */
-  --primary-dark: #00602e;
-  --primary-light: #e6f4ec;
-  --accent: #fdef42;        /* Doré Sénégal */
-  --accent-dark: #d4a017;
-  --dark: #0f172a;          /* Bleu nuit très sombre */
-  --gray-dark: #334155;
-  --gray-medium: #64748b;
-  --gray-light: #f1f5f9;
+  --primary: #000000;       /* Noir pur */
+  --primary-dark: #18181b;  /* Noir profond */
+  --primary-light: #f4f4f5; /* Gris clair épuré */
+  --accent: #ffffff;        /* Blanc éclatant */
+  --accent-dark: #27272a;
+  --dark: #09090b;          /* Noir encre */
+  --gray-dark: #27272a;
+  --gray-medium: #71717a;
+  --gray-light: #f4f4f5;
   --white: #ffffff;
-  --border: #e2e8f0;
-  --radius: 12px;
-  --radius-sm: 8px;
-  --shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06);
-  --shadow-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.12);
+  --border: #e4e4e7;
+  --radius: 10px;
+  --radius-sm: 6px;
+  --shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 12px 25px -4px rgba(0, 0, 0, 0.12);
   --transition: all 0.2s ease-in-out;
 }
 
@@ -30,7 +30,7 @@
 
 body {
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #f8fafc;
+  background-color: #fafafa;
   color: var(--dark);
   line-height: 1.6;
   min-height: 100vh;
@@ -50,7 +50,7 @@ a {
   padding: 0 20px;
 }
 
-/* Boutons réutilisables simples */
+/* Boutons réutilisables Noir & Blanc */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -66,35 +66,38 @@ a {
 }
 
 .btn-primary {
-  background-color: var(--primary);
-  color: var(--white);
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-dark);
+  background-color: #27272a;
+  border-color: #27272a;
   transform: translateY(-1px);
 }
 
 .btn-outline {
-  border-color: var(--primary);
-  color: var(--primary);
+  border: 1.5px solid #000000;
+  color: #000000;
   background: transparent;
 }
 
 .btn-outline:hover {
-  background-color: var(--primary-light);
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .btn-accent {
-  background-color: var(--accent-dark);
-  color: var(--white);
+  background-color: #27272a;
+  color: #ffffff;
 }
 
 .btn-accent:hover {
-  background-color: #b8860b;
+  background-color: #000000;
 }
 
-/* Badges pour les postes */
+/* Badges postes en noir et blanc */
 .badge {
   display: inline-block;
   padding: 4px 10px;
@@ -106,23 +109,23 @@ a {
 }
 
 .badge-attaquant {
-  background: #fee2e2;
-  color: #dc2626;
+  background: #000000;
+  color: #ffffff;
 }
 
 .badge-milieu {
-  background: #dbeafe;
-  color: #2563eb;
+  background: #27272a;
+  color: #ffffff;
 }
 
 .badge-defenseur {
-  background: #fef3c7;
-  color: #d97706;
+  background: #52525b;
+  color: #ffffff;
 }
 
 .badge-gardien {
-  background: #f3e8ff;
-  color: #7e22ce;
+  background: #71717a;
+  color: #ffffff;
 }
 
 /* Cartes simples */
@@ -165,8 +168,8 @@ a {
 
 .form-control:focus {
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(0, 133, 63, 0.15);
+  border-color: #000000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 .alert {
@@ -177,15 +180,15 @@ a {
 }
 
 .alert-danger {
-  background-color: #fee2e2;
-  color: #991b1b;
-  border: 1px solid #f87171;
+  background-color: #18181b;
+  color: #ffffff;
+  border: 1px solid #27272a;
 }
 
 .alert-success {
-  background-color: #dcfce7;
-  color: #166534;
-  border: 1px solid #86efac;
+  background-color: #f4f4f5;
+  color: #09090b;
+  border: 1px solid #d4d4d8;
 }
 
 /* ========================================================
@@ -214,10 +217,10 @@ a {
 
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(253, 239, 66, 0.3), 0 20px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.15), 0 20px 40px rgba(0, 0, 0, 0.6);
   }
   50% {
-    box-shadow: 0 0 30px rgba(253, 239, 66, 0.6), 0 25px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.35), 0 25px 50px rgba(0, 0, 0, 0.8);
   }
 }
 
@@ -228,13 +231,13 @@ a {
   }
   50% {
     transform: scale(1.4);
-    opacity: 0.5;
+    opacity: 0.4;
   }
 }
 
 @keyframes subtleFloat {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  50% { transform: translateY(-5px); }
 }
 
 .anim-fade-in-up {
@@ -257,4 +260,5 @@ a {
   opacity: 0;
   animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
 

@@ -156,11 +156,12 @@ interface ShowcaseVideo {
   styles: [`
     /* Section Hero avec Vidéo */
     .hero-video-section {
-      background: linear-gradient(135deg, #052010 0%, #004d25 60%, #03381b 100%);
+      background: linear-gradient(135deg, #000000 0%, #121215 50%, #09090b 100%);
       color: #ffffff;
       padding: 65px 0 75px 0;
       overflow: hidden;
       position: relative;
+      border-bottom: 1px solid #27272a;
     }
 
     .hero-video-section::before {
@@ -170,7 +171,7 @@ interface ShowcaseVideo {
       right: -50px;
       width: 450px;
       height: 450px;
-      background: radial-gradient(circle, rgba(253, 239, 66, 0.1) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -197,23 +198,23 @@ interface ShowcaseVideo {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(253, 239, 66, 0.12);
-      color: #fdef42;
-      border: 1px solid rgba(253, 239, 66, 0.35);
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
       padding: 6px 16px;
       border-radius: 30px;
       font-size: 0.82rem;
-      font-weight: 800;
+      font-weight: 700;
       letter-spacing: 0.6px;
       margin-bottom: 18px;
       backdrop-filter: blur(8px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     .pulse-dot {
       width: 8px;
       height: 8px;
-      background: #fdef42;
+      background: #ffffff;
       border-radius: 50%;
       display: inline-block;
       animation: pulseDot 2s infinite ease-in-out;
@@ -229,7 +230,7 @@ interface ShowcaseVideo {
 
     /* Texte scintillant sur le mot action */
     .shimmer-text {
-      background: linear-gradient(90deg, #fdef42 0%, #ffffff 40%, #fdef42 80%);
+      background: linear-gradient(90deg, #ffffff 0%, #a1a1aa 40%, #ffffff 80%);
       background-size: 200% auto;
       color: transparent;
       -webkit-background-clip: text;
@@ -237,7 +238,7 @@ interface ShowcaseVideo {
       animation: shimmer 4s linear infinite;
       display: inline-block;
       text-decoration: underline;
-      text-decoration-color: rgba(253, 239, 66, 0.5);
+      text-decoration-color: rgba(255, 255, 255, 0.5);
     }
 
     .hero-desc {
@@ -263,12 +264,17 @@ interface ShowcaseVideo {
     }
 
     .btn-glow {
-      box-shadow: 0 4px 15px rgba(0, 133, 63, 0.4);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+      background: #ffffff;
+      color: #000000;
+      border: 1px solid #ffffff;
     }
 
     .btn-glow:hover {
-      box-shadow: 0 8px 25px rgba(0, 133, 63, 0.6);
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
       transform: translateY(-2px);
+      background: #f4f4f5;
+      color: #000000;
     }
 
     .btn-interactive:hover {
@@ -300,14 +306,14 @@ interface ShowcaseVideo {
 
     .quick-stat strong {
       font-size: 1.35rem;
-      color: #fdef42;
+      color: #ffffff;
       font-weight: 800;
       letter-spacing: -0.5px;
     }
 
     .quick-stat span {
       font-size: 0.8rem;
-      color: #94a3b8;
+      color: #a1a1aa;
       font-weight: 500;
     }
 
@@ -332,9 +338,9 @@ interface ShowcaseVideo {
       max-width: 520px;
       border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-      border: 3px solid rgba(253, 239, 66, 0.45);
-      background: #0b1320;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      background: #09090b;
       transition: transform 0.3s ease;
     }
 
@@ -346,7 +352,7 @@ interface ShowcaseVideo {
       position: absolute;
       top: 12px;
       left: 12px;
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.85);
       color: #ffffff;
       padding: 6px 14px;
       border-radius: 8px;
@@ -363,7 +369,7 @@ interface ShowcaseVideo {
     .live-dot {
       width: 8px;
       height: 8px;
-      background: #ef4444;
+      background: #ffffff;
       border-radius: 50%;
       display: inline-block;
       animation: pulseDot 1.5s infinite;
@@ -380,7 +386,7 @@ interface ShowcaseVideo {
 
     /* Barre sélecteur sous la vidéo */
     .video-selector-bar {
-      background: rgba(15, 23, 42, 0.95);
+      background: #121215;
       padding: 10px 14px;
       display: flex;
       align-items: center;
@@ -392,7 +398,7 @@ interface ShowcaseVideo {
 
     .selector-label {
       font-size: 0.78rem;
-      color: #94a3b8;
+      color: #a1a1aa;
       font-weight: 600;
     }
 
@@ -402,7 +408,7 @@ interface ShowcaseVideo {
     }
 
     .btn-video-tab {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.15);
       color: #cbd5e1;
       padding: 4px 10px;
@@ -414,15 +420,15 @@ interface ShowcaseVideo {
     }
 
     .btn-video-tab:hover {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.18);
       color: #ffffff;
     }
 
     .btn-video-tab.active {
-      background: var(--primary);
-      color: #ffffff;
-      border-color: #fdef42;
-      box-shadow: 0 0 8px rgba(253, 239, 66, 0.4);
+      background: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
     }
 
     /* Grille Talents */
@@ -481,7 +487,7 @@ interface ShowcaseVideo {
       position: relative;
       height: 230px;
       overflow: hidden;
-      background: #e2e8f0;
+      background: #e4e4e7;
     }
 
     .card-thumb img {
@@ -505,13 +511,14 @@ interface ShowcaseVideo {
       position: absolute;
       bottom: 10px;
       left: 10px;
-      background: rgba(0, 0, 0, 0.75);
-      color: #fdef42;
+      background: rgba(0, 0, 0, 0.8);
+      color: #ffffff;
       padding: 4px 10px;
       border-radius: 6px;
       font-size: 0.75rem;
       font-weight: 700;
       backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .animate-pulse-badge {
@@ -571,10 +578,11 @@ interface ShowcaseVideo {
 
     /* Footer */
     .footer-minimal {
-      background: #0f172a;
-      color: #94a3b8;
+      background: #09090b;
+      color: #a1a1aa;
       padding: 25px 20px;
       margin-top: auto;
+      border-top: 1px solid #27272a;
     }
 
     .footer-flex {
@@ -587,12 +595,13 @@ interface ShowcaseVideo {
     }
 
     .footer-link {
-      color: #fdef42;
+      color: #ffffff;
       font-weight: 600;
+      text-decoration: underline;
     }
 
     .spinner {
-      border: 3px solid #f3f3f3;
+      border: 3px solid #e4e4e7;
       border-top: 3px solid var(--primary);
       border-radius: 50%;
       width: 36px;

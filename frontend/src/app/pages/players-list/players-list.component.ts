@@ -185,9 +185,9 @@ import { PlayerService, Player } from '../../services/player.service';
       border: 1px solid #cbd5e1;
     }
     .cache-badge.from-cache {
-      background: #ecfdf5;
-      color: #065f46;
-      border-color: #6ee7b7;
+      background: #18181b;
+      color: #ffffff;
+      border-color: #27272a;
     }
     .filter-card {
       background: #ffffff;

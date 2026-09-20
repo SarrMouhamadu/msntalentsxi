@@ -65,24 +65,26 @@ import { AuthService } from '../../services/auth.service';
       width: 42px;
       height: 42px;
       border-radius: 10px;
-      background: linear-gradient(135deg, var(--primary) 0%, #005a2b 100%);
-      color: #fdef42;
+      background: #000000;
+      color: #ffffff;
+      border: 1px solid #27272a;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
       font-size: 1.1rem;
-      box-shadow: 0 4px 10px rgba(0, 133, 63, 0.25);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
     .brand-title {
       font-size: 1.25rem;
       font-weight: 700;
-      color: var(--dark);
+      color: #000000;
       display: block;
       line-height: 1.2;
     }
     .brand-title strong {
-      color: var(--primary);
+      color: #000000;
+      text-decoration: underline;
     }
     .brand-subtitle {
       font-size: 0.72rem;
@@ -103,7 +105,9 @@ import { AuthService } from '../../services/auth.service';
       transition: var(--transition);
     }
     .nav-links a:hover, .nav-links a.active {
-      color: var(--primary);
+      color: #000000;
+      border-bottom: 2px solid #000000;
+      padding-bottom: 2px;
     }
     .btn-sm {
       padding: 7px 14px;
@@ -120,9 +124,9 @@ import { AuthService } from '../../services/auth.service';
       transition: var(--transition);
     }
     .btn-logout:hover {
-      background: #fee2e2;
-      border-color: #fca5a5;
-      color: #b91c1c;
+      background: #000000;
+      border-color: #000000;
+      color: #ffffff;
     }
   `]
 })
