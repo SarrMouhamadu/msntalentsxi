@@ -4,6 +4,12 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { PlayerService, Player } from '../../services/player.service';
 
+interface ShowcaseVideo {
+  title: string;
+  url: string;
+  tag: string;
+}
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -55,22 +61,39 @@ import { PlayerService, Player } from '../../services/player.service';
           </div>
         </div>
 
-        <!-- Colonne Vidéo de Dribles en Vedette avec effet flottant et lueur -->
-        <div class="hero-video-wrapper anim-fade-in anim-delay-3">
+        <!-- Colonne Vidéo de Dribles en Vedette avec sélection dynamique -->
+        <div class="hero-video-wrapper">
           <div class="video-frame">
             <div class="video-badge">
               <span class="live-dot"></span>
-              ▶ Dribbles & Gestes Techniques
+              ▶ {{ currentVideo().tag }}
             </div>
             <video 
-              src="/videos/hero-dribble.mp4" 
+              [src]="currentVideo().url" 
               autoplay 
               loop 
-              muted 
+              [muted]="true" 
               playsinline 
               controls
+              preload="auto"
               class="featured-video"
             ></video>
+
+            <!-- Sélecteur rapide de vidéos de dribles -->
+            <div class="video-selector-bar">
+              <span class="selector-label">Clips de dribles :</span>
+              <div class="selector-buttons">
+                <button 
+                  *ngFor="let v of showcaseVideos"
+                  type="button"
+                  class="btn-video-tab"
+                  [class.active]="currentVideo().url === v.url"
+                  (click)="changeVideo(v)"
+                >
+                  {{ v.title }}
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -294,22 +317,24 @@ import { PlayerService, Player } from '../../services/player.service';
       background: rgba(255, 255, 255, 0.15);
     }
 
-    /* Cadre Vidéo en vedette avec effet respiration */
+    /* Cadre Vidéo en vedette */
     .hero-video-wrapper {
       display: flex;
       justify-content: center;
+      width: 100%;
+      opacity: 1 !important;
       animation: subtleFloat 6s ease-in-out infinite;
     }
 
     .video-frame {
       position: relative;
       width: 100%;
-      max-width: 540px;
+      max-width: 520px;
       border-radius: 18px;
       overflow: hidden;
-      animation: pulseGlow 4s infinite ease-in-out;
-      border: 2px solid rgba(253, 239, 66, 0.45);
-      background: #000000;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      border: 3px solid rgba(253, 239, 66, 0.45);
+      background: #0b1320;
       transition: transform 0.3s ease;
     }
 
@@ -321,7 +346,7 @@ import { PlayerService, Player } from '../../services/player.service';
       position: absolute;
       top: 12px;
       left: 12px;
-      background: rgba(0, 0, 0, 0.75);
+      background: rgba(0, 0, 0, 0.8);
       color: #ffffff;
       padding: 6px 14px;
       border-radius: 8px;
@@ -346,10 +371,58 @@ import { PlayerService, Player } from '../../services/player.service';
 
     .featured-video {
       width: 100%;
-      height: 100%;
-      max-height: 380px;
+      min-height: 280px;
+      max-height: 360px;
       display: block;
       object-fit: cover;
+      background: #000000;
+    }
+
+    /* Barre sélecteur sous la vidéo */
+    .video-selector-bar {
+      background: rgba(15, 23, 42, 0.95);
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      flex-wrap: wrap;
+    }
+
+    .selector-label {
+      font-size: 0.78rem;
+      color: #94a3b8;
+      font-weight: 600;
+    }
+
+    .selector-buttons {
+      display: flex;
+      gap: 6px;
+    }
+
+    .btn-video-tab {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-video-tab:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+    }
+
+    .btn-video-tab.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: #fdef42;
+      box-shadow: 0 0 8px rgba(253, 239, 66, 0.4);
     }
 
     /* Grille Talents */
@@ -540,6 +613,15 @@ export class HomeComponent implements OnInit {
   players = signal<Player[]>([]);
   loading = signal(true);
 
+  // Liste des vidéos de dribles sélectionnables
+  showcaseVideos: ShowcaseVideo[] = [
+    { title: '🔥 Dribles #1', url: '/videos/hero-dribble.mp4', tag: 'Dribbles & Gestes Techniques' },
+    { title: '⚡ Dribles #2', url: '/videos/skills-dribble.mp4', tag: 'Vitesse & Percussion' },
+    { title: '⚽ Dribles #3', url: 'http://localhost:4000/uploads/dribble_camara.mp4', tag: 'Précision & Vista' },
+  ];
+
+  currentVideo = signal<ShowcaseVideo>(this.showcaseVideos[0]);
+
   ngOnInit(): void {
     this.playerService.getFeaturedPlayers().subscribe({
       next: (res) => {
@@ -551,5 +633,9 @@ export class HomeComponent implements OnInit {
         this.loading.set(false);
       }
     });
+  }
+
+  changeVideo(video: ShowcaseVideo): void {
+    this.currentVideo.set(video);
   }
 }
