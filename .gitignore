@@ -1,0 +1,29 @@
+# Dépendances Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Fichiers d'environnement
+.env
+.env.local
+.env.*.local
+
+# Angular build & cache
+.angular/
+dist/
+tmp/
+out-tsc/
+
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Prisma SQLite temporaire si utilisé
+*.db-journal

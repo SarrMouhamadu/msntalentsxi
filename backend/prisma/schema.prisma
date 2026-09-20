@@ -1,0 +1,72 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Rôles des utilisateurs
+enum Role {
+  JOUEUR
+  RECRUTEUR
+  ADMIN
+}
+
+// Postes au football
+enum Position {
+  GARDIEN
+  DEFENSEUR
+  MILIEU
+  ATTAQUANT
+}
+
+// Pied fort
+enum Foot {
+  DROITIER
+  GAUCHER
+  AMBIDEXTRE
+}
+
+// Table Utilisateurs (Authentification simple)
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  role      Role     @default(JOUEUR)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Si l'utilisateur est un joueur, il possède un profil sportif
+  profile   PlayerProfile?
+}
+
+// Table Profil Sportif du Joueur
+model PlayerProfile {
+  id            Int       @id @default(autoincrement())
+  userId        Int       @unique
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  firstName     String    // Prénom
+  lastName      String    // Nom
+  birthDate     DateTime? // Date de naissance
+  city          String    // Ville (Dakar, Thiès, Ziguinchor, etc.)
+  phone         String?   // Numéro de contact / WhatsApp
+
+  position      Position  // Poste (ATTAQUANT, MILIEU, DEFENSEUR, GARDIEN)
+  strongFoot    Foot?     // Pied fort
+  height        Int?      // Taille en cm (ex: 180)
+  weight        Int?      // Poids en kg (ex: 75)
+
+  currentClub   String?   // Club ou académie actuelle (ex: Génération Foot, Diambars, Jaraaf)
+  bio           String?   // Parcours, description sportive
+  palmares      String?   // Distinctions, trophées remportés
+
+  photoUrl      String?   // Chemin vers la photo stockée dans /uploads
+  videoUrl      String?   // Chemin vers la vidéo ou lien highlight
+
+  isFeatured    Boolean   @default(false) // Pour mettre en vedette sur la page d'accueil
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
