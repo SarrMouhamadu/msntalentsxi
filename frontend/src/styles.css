@@ -15,11 +15,13 @@
   --gray-light: #f1f5f9;    /* Fond cartes / tags (Slate 100) */
   --white: #ffffff;
   --border: #cbd5e1;        /* Bordures franches et visibles sans éblouir (Slate 300) */
-  --radius: 10px;
-  --radius-sm: 6px;
-  --shadow: 0 4px 20px -2px rgba(4, 25, 32, 0.07);
-  --shadow-hover: 0 12px 25px -4px rgba(4, 25, 32, 0.16);
-  --transition: all 0.2s ease-in-out;
+  --radius: 20px;           /* Squircle cartes Apple */
+  --radius-lg: 24px;        /* Grandes cartes & conteneurs média */
+  --radius-sm: 12px;        /* Éléments secondaires et inputs */
+  --radius-pill: 980px;     /* Boutons capsules / pilules emblématiques d'Apple */
+  --shadow: 0 4px 24px -2px rgba(4, 25, 32, 0.06);
+  --shadow-hover: 0 16px 36px -4px rgba(4, 25, 32, 0.12);
+  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -29,13 +31,15 @@
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Plus Jakarta Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   background-color: #f8fafc;
   color: var(--dark);
-  line-height: 1.6;
+  line-height: 1.5;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -45,21 +49,22 @@ a {
 
 /* Utilitaires conteneurs */
 .container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
-/* Boutons réutilisables Vert-Bleu haute lisibilité */
+/* Boutons réutilisables façon Apple (Pill / Capsule) */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.95rem;
-  padding: 10px 20px;
-  border-radius: var(--radius-sm);
+  letter-spacing: -0.01em;
+  padding: 11px 22px;
+  border-radius: var(--radius-pill);
   border: 1px solid transparent;
   cursor: pointer;
   transition: var(--transition);
@@ -69,18 +74,18 @@ a {
   background-color: #0f766e;
   color: #ffffff;
   border: 1px solid #0f766e;
-  box-shadow: 0 2px 8px rgba(15, 118, 110, 0.25);
+  box-shadow: 0 2px 10px rgba(15, 118, 110, 0.2);
 }
 
 .btn-primary:hover {
   background-color: #115e59;
   border-color: #115e59;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.35);
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(15, 118, 110, 0.3);
 }
 
 .btn-outline {
-  border: 2px solid #0f766e;
+  border: 1.5px solid #0f766e;
   color: #0f766e;
   background: transparent;
 }
@@ -88,6 +93,7 @@ a {
 .btn-outline:hover {
   background-color: #0f766e;
   color: #ffffff;
+  transform: scale(1.02);
 }
 
 .btn-accent {
@@ -97,16 +103,18 @@ a {
 
 .btn-accent:hover {
   background-color: #0369a1;
+  transform: scale(1.02);
 }
 
-/* Badges postes en vert-bleu distincts */
+/* Badges postes en pilules Apple */
 .badge {
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
 }
 
@@ -130,11 +138,11 @@ a {
   color: #ffffff;
 }
 
-/* Cartes simples */
+/* Cartes style Apple avec grands arrondis squircle */
 .card {
   background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border: 1px solid rgba(203, 213, 225, 0.7);
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   overflow: hidden;
   transition: var(--transition);
@@ -142,26 +150,27 @@ a {
 
 .card:hover {
   box-shadow: var(--shadow-hover);
-  transform: translateY(-3px);
-  border-color: #94a3b8;
+  transform: translateY(-4px) scale(1.01);
+  border-color: #cbd5e1;
 }
 
-/* Formulaires simples */
+/* Formulaires simples avec arrondis doux */
 .form-group {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .form-label {
   display: block;
-  font-weight: 700;
-  font-size: 0.9rem;
-  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
   color: var(--gray-dark);
 }
 
 .form-control {
   width: 100%;
-  padding: 10px 14px;
+  padding: 12px 16px;
   border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
   font-size: 0.95rem;
@@ -174,11 +183,11 @@ a {
 .form-control:focus {
   outline: none;
   border-color: #0f766e;
-  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.18);
+  box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.15);
 }
 
 .alert {
-  padding: 12px 16px;
+  padding: 14px 18px;
   border-radius: var(--radius-sm);
   margin-bottom: 20px;
   font-size: 0.95rem;

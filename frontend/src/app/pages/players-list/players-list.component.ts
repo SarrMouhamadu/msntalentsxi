@@ -168,20 +168,23 @@ import { PlayerService, Player } from '../../services/player.service';
       gap: 15px;
     }
     .page-title {
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       font-weight: 800;
       color: var(--dark);
+      letter-spacing: -0.025em;
     }
     .page-subtitle {
       color: var(--gray-medium);
       font-size: 1.05rem;
+      letter-spacing: -0.01em;
     }
     .cache-badge {
-      background: #e2e8f0;
+      background: #f1f5f9;
       color: var(--gray-dark);
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.85rem;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      font-weight: 600;
       border: 1px solid #cbd5e1;
     }
     .cache-badge.from-cache {
@@ -192,9 +195,9 @@ import { PlayerService, Player } from '../../services/player.service';
     }
     .filter-card {
       background: #ffffff;
-      padding: 24px;
-      border-radius: var(--radius);
-      border: 1.5px solid var(--border);
+      padding: 26px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(203, 213, 225, 0.7);
       box-shadow: var(--shadow);
       margin-bottom: 35px;
     }
@@ -211,16 +214,20 @@ import { PlayerService, Player } from '../../services/player.service';
     }
     .search-icon {
       position: absolute;
-      left: 14px;
+      left: 16px;
       top: 50%;
       transform: translateY(-50%);
       color: var(--gray-medium);
     }
     .search-input {
-      padding-left: 42px;
+      padding-left: 44px;
+      border-radius: var(--radius-pill);
     }
     .city-select-wrap {
       min-width: 220px;
+    }
+    .city-select-wrap select {
+      border-radius: var(--radius-pill);
     }
     .positions-filter {
       display: flex;
@@ -230,10 +237,11 @@ import { PlayerService, Player } from '../../services/player.service';
     .pos-btn {
       background: var(--gray-light);
       border: 1px solid transparent;
-      padding: 8px 16px;
-      border-radius: 20px;
+      padding: 8px 18px;
+      border-radius: var(--radius-pill);
       font-weight: 600;
       font-size: 0.85rem;
+      letter-spacing: -0.01em;
       cursor: pointer;
       transition: var(--transition);
       color: var(--gray-dark);
@@ -241,24 +249,32 @@ import { PlayerService, Player } from '../../services/player.service';
     .pos-btn:hover {
       background: #e2e8f0;
       color: var(--primary);
+      transform: scale(1.02);
     }
     .pos-btn.active {
       background: var(--primary);
       color: #ffffff;
-      box-shadow: 0 2px 8px rgba(15, 118, 110, 0.3);
+      box-shadow: 0 3px 10px rgba(15, 118, 110, 0.3);
     }
     .players-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 25px;
+      gap: 28px;
     }
     .player-card {
       display: flex;
       flex-direction: column;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .player-card:hover {
+      transform: translateY(-5px) scale(1.015);
+      box-shadow: 0 20px 40px -8px rgba(4, 25, 32, 0.16);
     }
     .card-media {
       position: relative;
-      height: 240px;
+      height: 250px;
       overflow: hidden;
       background: #e2e8f0;
     }
@@ -266,26 +282,31 @@ import { PlayerService, Player } from '../../services/player.service';
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .player-card:hover .player-img {
+      transform: scale(1.05);
     }
     .position-badge {
       position: absolute;
-      top: 12px;
-      right: 12px;
+      top: 14px;
+      right: 14px;
     }
     .video-indicator {
       position: absolute;
-      bottom: 12px;
-      left: 12px;
+      bottom: 14px;
+      left: 14px;
       background: rgba(4, 29, 36, 0.88);
       color: #2dd4bf;
-      padding: 4px 10px;
-      border-radius: 6px;
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
       font-size: 0.75rem;
       font-weight: 700;
+      backdrop-filter: blur(8px);
       border: 1px solid rgba(45, 212, 191, 0.3);
     }
     .card-body {
-      padding: 20px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -293,24 +314,25 @@ import { PlayerService, Player } from '../../services/player.service';
     .player-name {
       font-size: 1.3rem;
       font-weight: 700;
+      letter-spacing: -0.02em;
       margin-bottom: 4px;
     }
     .player-location {
       font-size: 0.9rem;
       color: var(--gray-medium);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
     .metrics-row {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
     .metric-tag {
       background: var(--gray-light);
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 0.78rem;
       color: var(--gray-dark);
       font-weight: 600;
     }

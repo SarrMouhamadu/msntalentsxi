@@ -44,8 +44,10 @@ import { AuthService } from '../../services/auth.service';
   `,
   styles: [`
     .header {
-      background: #ffffff;
-      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -54,7 +56,7 @@ import { AuthService } from '../../services/auth.service';
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 72px;
+      height: 60px;
     }
     .brand {
       display: flex;
@@ -62,64 +64,73 @@ import { AuthService } from '../../services/auth.service';
       gap: 12px;
     }
     .brand-badge {
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
       background: linear-gradient(135deg, #0f766e 0%, #0891b2 100%);
       color: #ffffff;
-      border: 1px solid #14b8a6;
+      border: 1px solid rgba(20, 184, 166, 0.6);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      font-size: 1.1rem;
-      box-shadow: 0 4px 10px rgba(15, 118, 110, 0.25);
+      font-size: 1rem;
+      box-shadow: 0 4px 12px rgba(15, 118, 110, 0.2);
     }
     .brand-title {
-      font-size: 1.25rem;
-      font-weight: 800;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
       color: var(--dark);
       display: block;
-      line-height: 1.2;
+      line-height: 1.15;
     }
     .brand-title strong {
       color: var(--primary);
       font-weight: 800;
     }
     .brand-subtitle {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       color: var(--gray-medium);
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
     }
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 14px;
     }
     .nav-links a {
-      font-weight: 600;
-      font-size: 0.95rem;
+      font-weight: 500;
+      font-size: 0.88rem;
+      letter-spacing: -0.01em;
       color: var(--gray-dark);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
       transition: var(--transition);
     }
-    .nav-links a:hover, .nav-links a.active {
+    .nav-links a:hover {
       color: var(--primary);
-      border-bottom: 2px solid var(--primary);
-      padding-bottom: 2px;
+      background: rgba(15, 118, 110, 0.08);
+    }
+    .nav-links a.active {
+      color: var(--primary);
+      font-weight: 600;
+      background: rgba(15, 118, 110, 0.12);
     }
     .btn-sm {
-      padding: 7px 14px;
-      font-size: 0.85rem;
+      padding: 6px 16px;
+      font-size: 0.82rem;
+      letter-spacing: -0.01em;
     }
     .btn-logout {
       background: transparent;
       border: 1.5px solid var(--border);
       color: var(--gray-medium);
       cursor: pointer;
-      border-radius: var(--radius-sm);
-      padding: 7px 12px;
+      border-radius: var(--radius-pill);
+      padding: 6px 14px;
       font-weight: 600;
       transition: var(--transition);
     }
@@ -127,6 +138,7 @@ import { AuthService } from '../../services/auth.service';
       background: var(--primary);
       border-color: var(--primary);
       color: #ffffff;
+      transform: scale(1.02);
     }
   `]
 })

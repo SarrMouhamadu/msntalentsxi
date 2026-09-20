@@ -158,10 +158,10 @@ interface ShowcaseVideo {
     .hero-video-section {
       background: linear-gradient(135deg, #041d24 0%, #083344 50%, #05212c 100%);
       color: #ffffff;
-      padding: 65px 0 75px 0;
+      padding: 75px 0 85px 0;
       overflow: hidden;
       position: relative;
-      border-bottom: 1px solid #164e63;
+      border-bottom: 1px solid rgba(45, 212, 191, 0.15);
     }
 
     .hero-video-section::before {
@@ -178,7 +178,7 @@ interface ShowcaseVideo {
     .hero-grid {
       display: grid;
       grid-template-columns: 1.15fr 1fr;
-      gap: 45px;
+      gap: 50px;
       align-items: center;
       position: relative;
       z-index: 1;
@@ -201,14 +201,15 @@ interface ShowcaseVideo {
       background: rgba(15, 118, 110, 0.35);
       color: #2dd4bf;
       border: 1px solid rgba(45, 212, 191, 0.45);
-      padding: 6px 16px;
-      border-radius: 30px;
-      font-size: 0.82rem;
+      padding: 6px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 0.8rem;
       font-weight: 700;
-      letter-spacing: 0.6px;
-      margin-bottom: 18px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 4px 12px rgba(4, 29, 36, 0.4);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 16px rgba(4, 29, 36, 0.4);
     }
 
     .pulse-dot {
@@ -221,11 +222,11 @@ interface ShowcaseVideo {
     }
 
     .hero-title {
-      font-size: 3.2rem;
+      font-size: clamp(2.6rem, 5.2vw, 3.8rem);
       font-weight: 800;
-      line-height: 1.15;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
       margin-bottom: 18px;
-      letter-spacing: -0.5px;
     }
 
     /* Texte scintillant sur le mot action */
@@ -242,60 +243,64 @@ interface ShowcaseVideo {
     }
 
     .hero-desc {
-      font-size: 1.18rem;
+      font-size: 1.2rem;
+      font-weight: 400;
       color: #cbd5e1;
-      margin-bottom: 32px;
-      line-height: 1.65;
+      margin-bottom: 34px;
+      line-height: 1.6;
       max-width: 520px;
+      letter-spacing: -0.01em;
     }
 
     .hero-cta {
       display: flex;
       gap: 16px;
-      margin-bottom: 40px;
+      margin-bottom: 42px;
       flex-wrap: wrap;
     }
 
     .btn-lg {
-      padding: 13px 26px;
+      padding: 13px 28px;
       font-size: 1rem;
-      border-radius: 10px;
-      transition: all 0.25s ease;
+      border-radius: var(--radius-pill);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      transition: var(--transition);
     }
 
     .btn-glow {
-      box-shadow: 0 4px 15px rgba(13, 148, 136, 0.4);
+      box-shadow: 0 4px 16px rgba(13, 148, 136, 0.4);
       background: #0d9488;
       color: #ffffff;
       border: 1px solid #14b8a6;
-      font-weight: 700;
+      font-weight: 600;
     }
 
     .btn-glow:hover {
       box-shadow: 0 8px 25px rgba(13, 148, 136, 0.6);
-      transform: translateY(-2px);
+      transform: scale(1.02);
       background: #0f766e;
       color: #ffffff;
     }
 
     .btn-interactive:hover {
-      transform: translateY(-2px);
+      transform: scale(1.02);
       background: rgba(45, 212, 191, 0.25);
       border-color: #2dd4bf;
     }
 
     .btn-outline-white {
-      border: 2px solid rgba(45, 212, 191, 0.6);
+      border: 1.5px solid rgba(45, 212, 191, 0.6);
       color: #ffffff;
       background: rgba(15, 118, 110, 0.15);
-      font-weight: 700;
+      font-weight: 600;
       backdrop-filter: blur(6px);
     }
 
     .quick-stats {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 28px;
       border-top: 1px solid rgba(255, 255, 255, 0.15);
       padding-top: 22px;
     }
@@ -306,16 +311,17 @@ interface ShowcaseVideo {
     }
 
     .quick-stat strong {
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       color: #2dd4bf;
       font-weight: 800;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.02em;
     }
 
     .quick-stat span {
       font-size: 0.8rem;
       color: #94a3b8;
       font-weight: 500;
+      letter-spacing: -0.01em;
     }
 
     .stat-separator {
@@ -324,7 +330,7 @@ interface ShowcaseVideo {
       background: rgba(255, 255, 255, 0.15);
     }
 
-    /* Cadre Vidéo en vedette */
+    /* Cadre Vidéo façon Apple Display */
     .hero-video-wrapper {
       display: flex;
       justify-content: center;
@@ -337,12 +343,12 @@ interface ShowcaseVideo {
       position: relative;
       width: 100%;
       max-width: 520px;
-      border-radius: 18px;
+      border-radius: var(--radius-lg);
       overflow: hidden;
-      box-shadow: 0 20px 40px rgba(4, 25, 32, 0.7);
-      border: 2.5px solid rgba(45, 212, 191, 0.35);
+      box-shadow: 0 24px 50px -10px rgba(4, 25, 32, 0.8);
+      border: 2px solid rgba(45, 212, 191, 0.35);
       background: #041d24;
-      transition: transform 0.3s ease;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .video-frame:hover {
@@ -351,16 +357,16 @@ interface ShowcaseVideo {
 
     .video-badge {
       position: absolute;
-      top: 12px;
-      left: 12px;
+      top: 14px;
+      left: 14px;
       background: rgba(4, 29, 36, 0.88);
       color: #ffffff;
       padding: 6px 14px;
-      border-radius: 8px;
-      font-size: 0.78rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.76rem;
       font-weight: 700;
       z-index: 10;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(12px);
       display: flex;
       align-items: center;
       gap: 6px;
@@ -385,10 +391,10 @@ interface ShowcaseVideo {
       background: #000000;
     }
 
-    /* Barre sélecteur sous la vidéo */
+    /* Barre sélecteur sous la vidéo façon Apple */
     .video-selector-bar {
       background: #062831;
-      padding: 10px 14px;
+      padding: 12px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -401,6 +407,7 @@ interface ShowcaseVideo {
       font-size: 0.78rem;
       color: #94a3b8;
       font-weight: 600;
+      letter-spacing: -0.01em;
     }
 
     .selector-buttons {
@@ -412,12 +419,12 @@ interface ShowcaseVideo {
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.15);
       color: #cbd5e1;
-      padding: 4px 10px;
-      border-radius: 6px;
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
       font-size: 0.75rem;
       font-weight: 600;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: var(--transition);
     }
 
     .btn-video-tab:hover {
@@ -434,59 +441,62 @@ interface ShowcaseVideo {
 
     /* Grille Talents */
     .talents-section {
-      padding: 60px 20px;
+      padding: 70px 24px;
     }
 
     .section-top {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
       flex-wrap: wrap;
       gap: 15px;
     }
 
     .section-heading {
-      font-size: 1.85rem;
+      font-size: 2.1rem;
       font-weight: 800;
       color: var(--dark);
-      letter-spacing: -0.5px;
+      letter-spacing: -0.025em;
     }
 
     .section-sub {
       color: var(--gray-medium);
-      font-size: 0.95rem;
-      margin-top: 3px;
+      font-size: 1rem;
+      margin-top: 4px;
+      letter-spacing: -0.01em;
     }
 
     .btn-hover-slide {
-      transition: all 0.2s ease;
+      transition: var(--transition);
     }
 
     .btn-hover-slide:hover {
-      padding-right: 24px;
+      transform: translateX(4px);
     }
 
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 28px;
     }
 
     .player-card {
       display: flex;
       flex-direction: column;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
     }
 
     .player-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(4, 25, 32, 0.12);
+      transform: translateY(-5px) scale(1.015);
+      box-shadow: 0 20px 40px -8px rgba(4, 25, 32, 0.16);
     }
 
     .card-thumb {
       position: relative;
-      height: 230px;
+      height: 240px;
       overflow: hidden;
       background: #e2e8f0;
     }
@@ -495,30 +505,30 @@ interface ShowcaseVideo {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.4s ease;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .player-card:hover .card-thumb img {
-      transform: scale(1.06);
+      transform: scale(1.05);
     }
 
     .pos-tag {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 12px;
+      right: 12px;
     }
 
     .video-tag {
       position: absolute;
-      bottom: 10px;
-      left: 10px;
-      background: rgba(4, 29, 36, 0.85);
+      bottom: 12px;
+      left: 12px;
+      background: rgba(4, 29, 36, 0.88);
       color: #2dd4bf;
-      padding: 4px 10px;
-      border-radius: 6px;
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
       font-size: 0.75rem;
       font-weight: 700;
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(8px);
       border: 1px solid rgba(45, 212, 191, 0.3);
     }
 
@@ -527,41 +537,42 @@ interface ShowcaseVideo {
     }
 
     .card-info {
-      padding: 18px;
+      padding: 22px;
       display: flex;
       flex-direction: column;
       flex: 1;
     }
 
     .name {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 700;
-      margin-bottom: 3px;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
     }
 
     .club {
       font-size: 0.88rem;
       color: var(--gray-medium);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .pills-row {
       display: flex;
       gap: 8px;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .pill {
       background: var(--gray-light);
-      padding: 3px 8px;
-      border-radius: 4px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
       font-size: 0.75rem;
       color: var(--gray-dark);
       font-weight: 600;
     }
 
     .btn-hover-grow {
-      transition: transform 0.2s ease, background-color 0.2s ease;
+      transition: var(--transition);
     }
 
     .btn-hover-grow:hover {

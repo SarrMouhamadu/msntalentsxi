@@ -169,14 +169,15 @@ import { PlayerService, Player } from '../../services/player.service';
       text-align: center;
     }
     .player-fullname {
-      font-size: 1.6rem;
+      font-size: 1.85rem;
       font-weight: 800;
+      letter-spacing: -0.025em;
       margin-bottom: 6px;
     }
     .player-club-text {
       font-size: 1.05rem;
       font-weight: 600;
-      color: var(--primary-dark);
+      color: var(--primary);
       margin-bottom: 4px;
     }
     .player-city-text {
@@ -193,9 +194,13 @@ import { PlayerService, Player } from '../../services/player.service';
       background: #25d366;
       color: #ffffff;
       font-weight: 700;
+      border-radius: var(--radius-pill);
+      padding: 12px 24px;
+      transition: var(--transition);
     }
     .btn-whatsapp:hover {
       background: #1eb956;
+      transform: scale(1.02);
     }
     .phone-display {
       display: block;
@@ -204,13 +209,15 @@ import { PlayerService, Player } from '../../services/player.service';
       margin-top: 8px;
     }
     .card-section {
-      padding: 26px;
+      padding: 30px;
+      border-radius: var(--radius-lg);
       margin-bottom: 25px;
     }
     .section-title {
-      font-size: 1.25rem;
+      font-size: 1.35rem;
       font-weight: 700;
-      margin-bottom: 18px;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
       color: var(--dark);
     }
     .specs-grid {
@@ -220,21 +227,23 @@ import { PlayerService, Player } from '../../services/player.service';
     }
     .spec-box {
       background: var(--gray-light);
-      padding: 14px;
-      border-radius: var(--radius-sm);
+      padding: 16px;
+      border-radius: 16px;
       display: flex;
       flex-direction: column;
     }
     .spec-label {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: var(--gray-medium);
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 700;
+      letter-spacing: 0.5px;
       margin-bottom: 4px;
     }
     .spec-val {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       font-weight: 700;
+      letter-spacing: -0.01em;
       color: var(--dark);
     }
     .text-content {
@@ -244,9 +253,10 @@ import { PlayerService, Player } from '../../services/player.service';
       white-space: pre-line;
     }
     .video-container {
-      border-radius: var(--radius-sm);
+      border-radius: var(--radius-lg);
       overflow: hidden;
       background: #000;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     }
     .video-player {
       width: 100%;
