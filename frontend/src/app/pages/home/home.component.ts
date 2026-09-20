@@ -156,12 +156,12 @@ interface ShowcaseVideo {
   styles: [`
     /* Section Hero avec Vidéo */
     .hero-video-section {
-      background: linear-gradient(135deg, #000000 0%, #121215 50%, #09090b 100%);
+      background: linear-gradient(135deg, #041d24 0%, #083344 50%, #05212c 100%);
       color: #ffffff;
       padding: 65px 0 75px 0;
       overflow: hidden;
       position: relative;
-      border-bottom: 1px solid #27272a;
+      border-bottom: 1px solid #164e63;
     }
 
     .hero-video-section::before {
@@ -171,7 +171,7 @@ interface ShowcaseVideo {
       right: -50px;
       width: 450px;
       height: 450px;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(45, 212, 191, 0.12) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -198,9 +198,9 @@ interface ShowcaseVideo {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(15, 118, 110, 0.35);
+      color: #2dd4bf;
+      border: 1px solid rgba(45, 212, 191, 0.45);
       padding: 6px 16px;
       border-radius: 30px;
       font-size: 0.82rem;
@@ -208,13 +208,13 @@ interface ShowcaseVideo {
       letter-spacing: 0.6px;
       margin-bottom: 18px;
       backdrop-filter: blur(8px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 12px rgba(4, 29, 36, 0.4);
     }
 
     .pulse-dot {
       width: 8px;
       height: 8px;
-      background: #ffffff;
+      background: #2dd4bf;
       border-radius: 50%;
       display: inline-block;
       animation: pulseDot 2s infinite ease-in-out;
@@ -230,7 +230,7 @@ interface ShowcaseVideo {
 
     /* Texte scintillant sur le mot action */
     .shimmer-text {
-      background: linear-gradient(90deg, #ffffff 0%, #a1a1aa 40%, #ffffff 80%);
+      background: linear-gradient(90deg, #2dd4bf 0%, #38bdf8 50%, #2dd4bf 100%);
       background-size: 200% auto;
       color: transparent;
       -webkit-background-clip: text;
@@ -238,7 +238,7 @@ interface ShowcaseVideo {
       animation: shimmer 4s linear infinite;
       display: inline-block;
       text-decoration: underline;
-      text-decoration-color: rgba(255, 255, 255, 0.5);
+      text-decoration-color: rgba(45, 212, 191, 0.5);
     }
 
     .hero-desc {
@@ -264,30 +264,31 @@ interface ShowcaseVideo {
     }
 
     .btn-glow {
-      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
-      background: #ffffff;
-      color: #000000;
-      border: 1px solid #ffffff;
+      box-shadow: 0 4px 15px rgba(13, 148, 136, 0.4);
+      background: #0d9488;
+      color: #ffffff;
+      border: 1px solid #14b8a6;
+      font-weight: 700;
     }
 
     .btn-glow:hover {
-      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 25px rgba(13, 148, 136, 0.6);
       transform: translateY(-2px);
-      background: #f4f4f5;
-      color: #000000;
+      background: #0f766e;
+      color: #ffffff;
     }
 
     .btn-interactive:hover {
       transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.22);
-      border-color: #ffffff;
+      background: rgba(45, 212, 191, 0.25);
+      border-color: #2dd4bf;
     }
 
     .btn-outline-white {
-      border: 2px solid rgba(255, 255, 255, 0.4);
+      border: 2px solid rgba(45, 212, 191, 0.6);
       color: #ffffff;
-      background: rgba(255, 255, 255, 0.08);
-      font-weight: 600;
+      background: rgba(15, 118, 110, 0.15);
+      font-weight: 700;
       backdrop-filter: blur(6px);
     }
 
@@ -306,14 +307,14 @@ interface ShowcaseVideo {
 
     .quick-stat strong {
       font-size: 1.35rem;
-      color: #ffffff;
+      color: #2dd4bf;
       font-weight: 800;
       letter-spacing: -0.5px;
     }
 
     .quick-stat span {
       font-size: 0.8rem;
-      color: #a1a1aa;
+      color: #94a3b8;
       font-weight: 500;
     }
 
@@ -338,9 +339,9 @@ interface ShowcaseVideo {
       max-width: 520px;
       border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-      border: 2px solid rgba(255, 255, 255, 0.25);
-      background: #09090b;
+      box-shadow: 0 20px 40px rgba(4, 25, 32, 0.7);
+      border: 2.5px solid rgba(45, 212, 191, 0.35);
+      background: #041d24;
       transition: transform 0.3s ease;
     }
 
@@ -352,7 +353,7 @@ interface ShowcaseVideo {
       position: absolute;
       top: 12px;
       left: 12px;
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(4, 29, 36, 0.88);
       color: #ffffff;
       padding: 6px 14px;
       border-radius: 8px;
@@ -363,13 +364,13 @@ interface ShowcaseVideo {
       display: flex;
       align-items: center;
       gap: 6px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(45, 212, 191, 0.3);
     }
 
     .live-dot {
       width: 8px;
       height: 8px;
-      background: #ffffff;
+      background: #2dd4bf;
       border-radius: 50%;
       display: inline-block;
       animation: pulseDot 1.5s infinite;
@@ -386,19 +387,19 @@ interface ShowcaseVideo {
 
     /* Barre sélecteur sous la vidéo */
     .video-selector-bar {
-      background: #121215;
+      background: #062831;
       padding: 10px 14px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 8px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(45, 212, 191, 0.2);
       flex-wrap: wrap;
     }
 
     .selector-label {
       font-size: 0.78rem;
-      color: #a1a1aa;
+      color: #94a3b8;
       font-weight: 600;
     }
 
@@ -420,15 +421,15 @@ interface ShowcaseVideo {
     }
 
     .btn-video-tab:hover {
-      background: rgba(255, 255, 255, 0.18);
+      background: rgba(45, 212, 191, 0.2);
       color: #ffffff;
     }
 
     .btn-video-tab.active {
-      background: #ffffff;
-      color: #000000;
-      border-color: #ffffff;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+      background: #0d9488;
+      color: #ffffff;
+      border-color: #2dd4bf;
+      box-shadow: 0 0 10px rgba(45, 212, 191, 0.4);
     }
 
     /* Grille Talents */
@@ -480,14 +481,14 @@ interface ShowcaseVideo {
 
     .player-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 12px 30px rgba(4, 25, 32, 0.12);
     }
 
     .card-thumb {
       position: relative;
       height: 230px;
       overflow: hidden;
-      background: #e4e4e7;
+      background: #e2e8f0;
     }
 
     .card-thumb img {
@@ -511,14 +512,14 @@ interface ShowcaseVideo {
       position: absolute;
       bottom: 10px;
       left: 10px;
-      background: rgba(0, 0, 0, 0.8);
-      color: #ffffff;
+      background: rgba(4, 29, 36, 0.85);
+      color: #2dd4bf;
       padding: 4px 10px;
       border-radius: 6px;
       font-size: 0.75rem;
       font-weight: 700;
       backdrop-filter: blur(4px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(45, 212, 191, 0.3);
     }
 
     .animate-pulse-badge {
@@ -578,11 +579,11 @@ interface ShowcaseVideo {
 
     /* Footer */
     .footer-minimal {
-      background: #09090b;
-      color: #a1a1aa;
+      background: #041d24;
+      color: #94a3b8;
       padding: 25px 20px;
       margin-top: auto;
-      border-top: 1px solid #27272a;
+      border-top: 1px solid #164e63;
     }
 
     .footer-flex {
@@ -595,13 +596,16 @@ interface ShowcaseVideo {
     }
 
     .footer-link {
-      color: #ffffff;
+      color: #2dd4bf;
       font-weight: 600;
       text-decoration: underline;
     }
+    .footer-link:hover {
+      color: #5eead4;
+    }
 
     .spinner {
-      border: 3px solid #e4e4e7;
+      border: 3px solid #e2e8f0;
       border-top: 3px solid var(--primary);
       border-radius: 50%;
       width: 36px;

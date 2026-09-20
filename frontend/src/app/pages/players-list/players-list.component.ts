@@ -185,15 +185,16 @@ import { PlayerService, Player } from '../../services/player.service';
       border: 1px solid #cbd5e1;
     }
     .cache-badge.from-cache {
-      background: #18181b;
-      color: #ffffff;
-      border-color: #27272a;
+      background: #f0fdfa;
+      color: #0f766e;
+      border-color: #5eead4;
+      font-weight: 700;
     }
     .filter-card {
       background: #ffffff;
       padding: 24px;
       border-radius: var(--radius);
-      border: 1px solid var(--border);
+      border: 1.5px solid var(--border);
       box-shadow: var(--shadow);
       margin-bottom: 35px;
     }
@@ -239,10 +240,12 @@ import { PlayerService, Player } from '../../services/player.service';
     }
     .pos-btn:hover {
       background: #e2e8f0;
+      color: var(--primary);
     }
     .pos-btn.active {
       background: var(--primary);
       color: #ffffff;
+      box-shadow: 0 2px 8px rgba(15, 118, 110, 0.3);
     }
     .players-grid {
       display: grid;
@@ -273,12 +276,13 @@ import { PlayerService, Player } from '../../services/player.service';
       position: absolute;
       bottom: 12px;
       left: 12px;
-      background: rgba(0, 0, 0, 0.75);
-      color: #ffffff;
+      background: rgba(4, 29, 36, 0.88);
+      color: #2dd4bf;
       padding: 4px 10px;
       border-radius: 6px;
       font-size: 0.75rem;
       font-weight: 700;
+      border: 1px solid rgba(45, 212, 191, 0.3);
     }
     .card-body {
       padding: 20px;

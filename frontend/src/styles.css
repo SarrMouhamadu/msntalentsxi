@@ -4,21 +4,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --primary: #000000;       /* Noir pur */
-  --primary-dark: #18181b;  /* Noir profond */
-  --primary-light: #f4f4f5; /* Gris clair épuré */
-  --accent: #ffffff;        /* Blanc éclatant */
-  --accent-dark: #27272a;
-  --dark: #09090b;          /* Noir encre */
-  --gray-dark: #27272a;
-  --gray-medium: #71717a;
-  --gray-light: #f4f4f5;
+  --primary: #0f766e;       /* Vert-Bleu profond (Teal 700) - Contraste WCAG AAA */
+  --primary-dark: #115e59;  /* Vert-Bleu sombre (Teal 800) */
+  --primary-light: #f0fdfa; /* Voile menthe douce (Teal 50) */
+  --accent: #0284c7;        /* Bleu Océan (Sky 600) */
+  --accent-dark: #0369a1;
+  --dark: #041920;          /* Nuit Pétrole - Doux pour la rétine, net et sans fatigue */
+  --gray-dark: #1e293b;     /* Texte foncé (Slate 800) */
+  --gray-medium: #475569;   /* Texte secondaire (Slate 600) - Contraste > 4.5:1 */
+  --gray-light: #f1f5f9;    /* Fond cartes / tags (Slate 100) */
   --white: #ffffff;
-  --border: #e4e4e7;
+  --border: #cbd5e1;        /* Bordures franches et visibles sans éblouir (Slate 300) */
   --radius: 10px;
   --radius-sm: 6px;
-  --shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
-  --shadow-hover: 0 12px 25px -4px rgba(0, 0, 0, 0.12);
+  --shadow: 0 4px 20px -2px rgba(4, 25, 32, 0.07);
+  --shadow-hover: 0 12px 25px -4px rgba(4, 25, 32, 0.16);
   --transition: all 0.2s ease-in-out;
 }
 
@@ -30,7 +30,7 @@
 
 body {
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #fafafa;
+  background-color: #f8fafc;
   color: var(--dark);
   line-height: 1.6;
   min-height: 100vh;
@@ -50,13 +50,13 @@ a {
   padding: 0 20px;
 }
 
-/* Boutons réutilisables Noir & Blanc */
+/* Boutons réutilisables Vert-Bleu haute lisibilité */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.95rem;
   padding: 10px 20px;
   border-radius: var(--radius-sm);
@@ -66,38 +66,40 @@ a {
 }
 
 .btn-primary {
-  background-color: #000000;
+  background-color: #0f766e;
   color: #ffffff;
-  border: 1px solid #000000;
+  border: 1px solid #0f766e;
+  box-shadow: 0 2px 8px rgba(15, 118, 110, 0.25);
 }
 
 .btn-primary:hover {
-  background-color: #27272a;
-  border-color: #27272a;
+  background-color: #115e59;
+  border-color: #115e59;
   transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.35);
 }
 
 .btn-outline {
-  border: 1.5px solid #000000;
-  color: #000000;
+  border: 2px solid #0f766e;
+  color: #0f766e;
   background: transparent;
 }
 
 .btn-outline:hover {
-  background-color: #000000;
+  background-color: #0f766e;
   color: #ffffff;
 }
 
 .btn-accent {
-  background-color: #27272a;
+  background-color: #0284c7;
   color: #ffffff;
 }
 
 .btn-accent:hover {
-  background-color: #000000;
+  background-color: #0369a1;
 }
 
-/* Badges postes en noir et blanc */
+/* Badges postes en vert-bleu distincts */
 .badge {
   display: inline-block;
   padding: 4px 10px;
@@ -109,22 +111,22 @@ a {
 }
 
 .badge-attaquant {
-  background: #000000;
+  background: #0f766e;
   color: #ffffff;
 }
 
 .badge-milieu {
-  background: #27272a;
+  background: #0284c7;
   color: #ffffff;
 }
 
 .badge-defenseur {
-  background: #52525b;
+  background: #0891b2;
   color: #ffffff;
 }
 
 .badge-gardien {
-  background: #71717a;
+  background: #334155;
   color: #ffffff;
 }
 
@@ -141,6 +143,7 @@ a {
 .card:hover {
   box-shadow: var(--shadow-hover);
   transform: translateY(-3px);
+  border-color: #94a3b8;
 }
 
 /* Formulaires simples */
@@ -150,7 +153,7 @@ a {
 
 .form-label {
   display: block;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.9rem;
   margin-bottom: 6px;
   color: var(--gray-dark);
@@ -159,17 +162,19 @@ a {
 .form-control {
   width: 100%;
   padding: 10px 14px;
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
   font-size: 0.95rem;
   font-family: inherit;
   transition: var(--transition);
+  background-color: #ffffff;
+  color: var(--dark);
 }
 
 .form-control:focus {
   outline: none;
-  border-color: #000000;
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.18);
 }
 
 .alert {
@@ -177,18 +182,19 @@ a {
   border-radius: var(--radius-sm);
   margin-bottom: 20px;
   font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .alert-danger {
-  background-color: #18181b;
-  color: #ffffff;
-  border: 1px solid #27272a;
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
 }
 
 .alert-success {
-  background-color: #f4f4f5;
-  color: #09090b;
-  border: 1px solid #d4d4d8;
+  background-color: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
 }
 
 /* ========================================================
@@ -217,10 +223,10 @@ a {
 
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.15), 0 20px 40px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 15px rgba(45, 212, 191, 0.25), 0 20px 40px rgba(4, 25, 32, 0.7);
   }
   50% {
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.35), 0 25px 50px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 30px rgba(45, 212, 191, 0.5), 0 25px 50px rgba(4, 25, 32, 0.9);
   }
 }
 

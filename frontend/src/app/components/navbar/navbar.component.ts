@@ -65,31 +65,31 @@ import { AuthService } from '../../services/auth.service';
       width: 42px;
       height: 42px;
       border-radius: 10px;
-      background: #000000;
+      background: linear-gradient(135deg, #0f766e 0%, #0891b2 100%);
       color: #ffffff;
-      border: 1px solid #27272a;
+      border: 1px solid #14b8a6;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 800;
       font-size: 1.1rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 10px rgba(15, 118, 110, 0.25);
     }
     .brand-title {
       font-size: 1.25rem;
-      font-weight: 700;
-      color: #000000;
+      font-weight: 800;
+      color: var(--dark);
       display: block;
       line-height: 1.2;
     }
     .brand-title strong {
-      color: #000000;
-      text-decoration: underline;
+      color: var(--primary);
+      font-weight: 800;
     }
     .brand-subtitle {
       font-size: 0.72rem;
       color: var(--gray-medium);
-      font-weight: 500;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -105,8 +105,8 @@ import { AuthService } from '../../services/auth.service';
       transition: var(--transition);
     }
     .nav-links a:hover, .nav-links a.active {
-      color: #000000;
-      border-bottom: 2px solid #000000;
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
       padding-bottom: 2px;
     }
     .btn-sm {
@@ -115,7 +115,7 @@ import { AuthService } from '../../services/auth.service';
     }
     .btn-logout {
       background: transparent;
-      border: 1px solid var(--border);
+      border: 1.5px solid var(--border);
       color: var(--gray-medium);
       cursor: pointer;
       border-radius: var(--radius-sm);
@@ -124,8 +124,8 @@ import { AuthService } from '../../services/auth.service';
       transition: var(--transition);
     }
     .btn-logout:hover {
-      background: #000000;
-      border-color: #000000;
+      background: var(--primary);
+      border-color: var(--primary);
       color: #ffffff;
     }
   `]
