@@ -1,0 +1,110 @@
+# MSN Talents XI
+
+### La vitrine numérique des talents sportifs sénégalais
+
+**MSN Talents XI** est une plateforme numérique dédiée à la **détection, la valorisation et la visibilité des talents sportifs sénégalais**, avec un lancement initial centré sur le **football**.
+
+L’objectif est de créer un espace numérique où les jeunes footballeurs et joueurs confirmés peuvent présenter leur profil sportif, mettre en avant leurs performances et construire progressivement leur visibilité auprès des différents acteurs du monde sportif.
+
+---
+
+## 1. Le constat
+
+Le Sénégal dispose d’un important potentiel sportif, notamment dans le football. De nombreux jeunes talents évoluent dans des clubs, académies, compétitions locales ou dans des environnements moins visibles.
+
+Cependant, leurs performances, parcours et profils sont souvent dispersés entre les réseaux sociaux, les vidéos, les clubs et les différents événements sportifs.
+
+**MSN Talents XI** vise à contribuer à centraliser cette visibilité dans un environnement dédié au sport.
+
+---
+
+## 2. La solution
+
+La plateforme permettra aux talents sportifs de disposer d'une **présence numérique structurée**.
+
+Un joueur pourra notamment présenter :
+* Son profil sportif ;
+* Son parcours ;
+* Son poste et ses caractéristiques ;
+* Ses statistiques et performances ;
+* Ses photos ;
+* Ses vidéos et highlights ;
+* Ses distinctions et palmarès.
+
+L’objectif n’est pas simplement de publier du contenu, mais de permettre à chaque talent de **construire une véritable vitrine sportive numérique**.
+
+---
+
+## 3. Un écosystème autour du football
+
+MSN Talents XI ne sera pas uniquement destiné aux joueurs. La plateforme prévoit progressivement différents espaces pour les acteurs de l’écosystème :
+
+### 👤 Joueurs
+Pour créer et valoriser leur profil sportif.
+
+### ⚽ Clubs et académies
+Pour présenter leurs équipes, leurs joueurs et leurs activités, mais également contribuer à la visibilité de leurs talents.
+
+### 🔍 Recruteurs
+Pour rechercher et découvrir des profils sportifs selon différents critères.
+
+### 📰 Presse sportive agréée
+Pour valoriser les compétitions, les joueurs, les clubs et l’actualité sportive.
+
+### 🏛️ Institutions sportives
+Pour disposer d’un espace officiel et communiquer avec l’écosystème présent sur la plateforme.
+
+---
+
+## 4. Une ouverture vers l'international
+
+L’ambition de MSN Talents XI est également de **faciliter la visibilité internationale des talents sénégalais**.
+
+À terme, un recruteur, un club ou un acteur sportif situé au Sénégal ou à l’étranger pourra découvrir des profils issus du football sénégalais à travers une plateforme dédiée.
+
+La plateforme ne prétend pas garantir un recrutement. Elle cherche plutôt à **faciliter la découverte, la visibilité et la mise en relation** entre les talents et les acteurs susceptibles de s'intéresser à leurs profils.
+
+---
+
+## 5. Le football comme première étape
+
+Le **football constitue le premier terrain d’expérimentation de MSN Talents XI**, compte tenu de son importance dans l’écosystème sportif sénégalais et de la richesse des talents qui y évoluent.
+
+L’objectif est de construire progressivement une plateforme adaptée aux réalités du terrain, en collaboration avec les acteurs du football : joueurs, clubs, académies, recruteurs, médias et institutions.
+
+---
+
+## 6. Une plateforme pensée pour évoluer
+
+MSN Talents XI a vocation à dépasser le seul cadre du football.
+
+Après cette première phase, la plateforme pourra progressivement intégrer **d’autres disciplines sportives**, notamment :
+* 🏀 Basketball
+* 🏃 Athlétisme
+* 🤼 Lutte
+* 🤾 Handball
+* 🏐 Volleyball
+* 🏊 Natation
+* 🥋 Taekwondo & Karaté
+* 🎾 Tennis
+* 🚴 Cyclisme
+* et d’autres disciplines.
+
+Chaque sport pourra disposer d’un environnement adapté à ses propres caractéristiques et critères de performance.
+
+---
+
+## 7. Vision
+
+La vision de MSN Talents XI est de devenir progressivement **une infrastructure numérique de référence pour la visibilité des talents sportifs sénégalais**.
+
+À long terme, la plateforme ambitionne de connecter :
+
+$$\text{Talents} \longrightarrow \text{Clubs} \longrightarrow \text{Académies} \longrightarrow \text{Recruteurs} \longrightarrow \text{Médias} \longrightarrow \text{Institutions} \longrightarrow \text{Opportunités}$$
+
+L'objectif est de contribuer à faire du talent sportif sénégalais un talent **visible, identifiable et accessible**, au Sénégal comme à l’international.
+
+---
+
+### MSN Talents XI
+**Identifier. Valoriser. Connecter.**
